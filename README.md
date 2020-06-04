@@ -1,3 +1,2 @@
-# Example repository
 Live Laugh Learn
-Hello World !!!
+    This contains sample code that I have practised.
