@@ -1,0 +1,48 @@
+/******************************************************************************
+
+                          In this game user is asked a number and that 
+                          number is compared with randomly generated
+                          numbers.If user fails to give correct answer 
+                          in five attempts the game is over.
+
+*******************************************************************************/
+import java.util.*;
+import java.util.Random;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    System.out.println("Please enter your name :");
+		Scanner sc = new Scanner(System.in);
+        String name = sc.next();
+        System.out.println("Hello " + name);
+        Random random = new Random();
+        int upperbound = 11;
+        int number = random.nextInt(upperbound);
+        for(int i=1;i<=5;i++){
+            if(i>5){
+                System.out.println("Sorry " + name + ".Better luck next time!!");
+            }else{
+                System.out.println("Guess a number between 0 and 10");
+                int ans = sc.nextInt();
+                if(ans == number){
+                System.out.println("Congratulations " + name +" ! You gave the correct answer.");
+                break;
+                }else{
+                    if(ans > number){
+                        System.out.println("Try once again");
+                        System.out.println("HINT: Guess a number lower than your previous guess");
+                    }else{
+                        System.out.println("Try once again");
+                        System.out.println("HINT: Guess a number higher than your previous guess");
+                    }
+                
+                }  
+            }
+            
+            
+        }
+        
+        
+	}
+}
